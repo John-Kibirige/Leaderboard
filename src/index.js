@@ -1,6 +1,6 @@
 import './styles/main.scss';
 import scores from './modules/scores.js';
-import { createScore } from './modules/create-score';
+import createScore from './modules/create-score.js';
 
 const displayAllScores = document.querySelector('.display-all-scores');
 scores.forEach((scoreObj) => {
