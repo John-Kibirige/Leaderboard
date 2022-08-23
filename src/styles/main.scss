@@ -1,0 +1,26 @@
+body {
+  background-color: #fdfdfd;
+}
+
+.main {
+  border: thin solid;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 53px;
+  gap: 20px;
+}
+
+li {
+  margin-bottom: 12px;
+  list-style-type: none;
+}
+
+.refresh {
+  height: 27px;
+  margin-left: 12px;
+}
+
+.score-btn {
+  display: flex;
+  align-items: center;
+}
