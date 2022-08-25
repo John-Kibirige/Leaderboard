@@ -2,11 +2,13 @@ import './styles/main.scss';
 import { createScore, Score } from './modules/create-score.js';
 import { postData, getData } from './modules/api.js';
 import { handleValidation, validInput } from './modules/validation.js';
+import createMessage from './modules/error.js';
 
 const submitBtn = document.querySelector('#submit-btn');
 const name = document.querySelector('.form-name');
 const score = document.querySelector('.form-score');
 const refreshBtn = document.querySelector('.refresh');
+const form = document.querySelector('.form');
 
 const handleClick = (e) => {
   e.target.classList.add('active');
@@ -26,10 +28,15 @@ submitBtn.addEventListener('click', (e) => {
   const newScore = new Score(name.value, +score.value);
   postData(newScore).then((returned) => {
     if (returned.result === 'Leaderboard score created correctly.') {
-      // display success message
+      const message = createMessage('Score submitted successfully');
+      form.appendChild(message);
+      message.classList.add('active');
     } else {
-      // display failure message
+      const msg = createMessage('Failed !!! to submit score');
+      form.appendChild(msg);
     }
+    name.value = '';
+    score.value = '';
   });
 });
 

@@ -133,4 +133,10 @@ li {
   font-family: poppins;
   top: 96px;
   font-size: 13px;
+
+  &.active {
+    color: green;
+    top: 198px;
+    font-size: 14px;
+  }
 }
