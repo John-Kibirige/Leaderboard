@@ -4,6 +4,7 @@ html {
   box-sizing: border-box;
   font-size: 100%;
 }
+
 *,
 *::after,
 *::before {
@@ -15,11 +16,17 @@ html {
 body {
   background-color: #fdfdfd;
   font-family: 'Roboto', sans-serif;
+
+  li {
+    margin-bottom: 27px;
+    list-style-type: none;
+  }
 }
 
 .header {
   padding: 12px;
   font-size: 14px;
+
   @media (min-width: 768px) {
     padding: 18px;
     font-size: 20px;
@@ -67,10 +74,12 @@ body {
     margin-inline: auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     .refresh {
       height: 34px;
       border: thin solid #0a8585;
+      margin-left: 12px;
     }
 
     @media (min-width: 768px) {
@@ -124,28 +133,12 @@ body {
   }
 }
 
-li {
-  margin-bottom: 27px;
-  list-style-type: none;
-}
-
-.refresh {
-  height: 27px;
-  margin-left: 12px;
-}
-
-.score-btn {
-  display: flex;
-  align-items: center;
-}
-
 .error {
   color: red;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
   position: absolute;
   left: 34px;
-  font-family: poppins;
   top: 96px;
   font-size: 13px;
 
