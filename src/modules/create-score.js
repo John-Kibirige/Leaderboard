@@ -1,3 +1,10 @@
+class Score {
+  constructor(user, score) {
+    this.user = user;
+    this.score = score;
+  }
+}
+
 const createScore = (scoreObj) => {
   const li = document.createElement('li');
   li.classList.add('score-item');
@@ -5,4 +12,4 @@ const createScore = (scoreObj) => {
   return li;
 };
 
-export default createScore;
+export { Score, createScore };
