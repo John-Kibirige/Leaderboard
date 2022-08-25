@@ -33,8 +33,7 @@ submitBtn.addEventListener('click', (e) => {
   });
 });
 
-refreshBtn.addEventListener('click', (e) => {
-  handleClick(e);
+const fetchAndDisplay = () => {
   getData().then((returned) => {
     const { result: scores } = returned;
     displayAllScores.innerHTML = '';
@@ -42,4 +41,13 @@ refreshBtn.addEventListener('click', (e) => {
       displayAllScores.appendChild(createScore(scoreObj));
     });
   });
+};
+
+refreshBtn.addEventListener('click', (e) => {
+  handleClick(e);
+  fetchAndDisplay();
+});
+
+window.addEventListener('load', () => {
+  fetchAndDisplay();
 });
