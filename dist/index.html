@@ -18,7 +18,41 @@
           <button class="refresh">Refresh</button>
         </div>
 
-        <ul class="display-all-scores"></ul>
+        <ul class="display-all-scores">
+          <li class="score"></li>
+        </ul>
+      </section>
+
+      <section class="add-score">
+        <form action="#" class="form">
+          <h3 class="form-title">Add your score</h3>
+          <ul>
+            <li>
+              <label for="form-name"></label>
+              <input
+                type="text"
+                class="form-name"
+                id="form-name"
+                placeholder="Your name"
+                required
+              />
+            </li>
+            <li>
+              <label for="form-score"></label>
+              <input
+                type="text"
+                class="form-score"
+                id="form-score"
+                placeholder="your score"
+                required
+              />
+            </li>
+            <li>
+              <label for="submit-btn"></label>
+              <input type="button" id="submit-btn" value="Submit" />
+            </li>
+          </ul>
+        </form>
       </section>
     </main>
   </body>
