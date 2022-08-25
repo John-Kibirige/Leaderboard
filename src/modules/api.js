@@ -1,4 +1,4 @@
-const postData = async (scoreObject) => {
+const postData = async (data) => {
   const response = await fetch(
     'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/2CK77ljZH2u23q36Lc0c/scores/',
     {
@@ -7,10 +7,18 @@ const postData = async (scoreObject) => {
         'Content-Type': 'application/json',
         Accept: 'application/json',
       },
-      body: JSON.stringify(scoreObject),
+      body: JSON.stringify(data),
     }
   );
   return response.json();
 };
 
-export { postData };
+const getData = async () => {
+  let response = await fetch(
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/2CK77ljZH2u23q36Lc0c/scores/'
+  );
+  response = await response.json();
+  return response;
+};
+
+export { postData, getData };

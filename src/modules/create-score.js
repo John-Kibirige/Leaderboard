@@ -8,7 +8,7 @@ class Score {
 const createScore = (scoreObj) => {
   const li = document.createElement('li');
   li.classList.add('score-item');
-  li.innerText = `${scoreObj.name}: ${scoreObj.score}`;
+  li.innerText = `${scoreObj.user}: ${scoreObj.score}`;
   return li;
 };
 

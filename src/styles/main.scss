@@ -11,7 +11,7 @@ body {
 }
 
 li {
-  margin-bottom: 12px;
+  margin-bottom: 24px;
   list-style-type: none;
 }
 
@@ -23,4 +23,18 @@ li {
 .score-btn {
   display: flex;
   align-items: center;
+}
+
+.error {
+  color: red;
+  font-weight: 600;
+  font-family: arial;
+  position: absolute;
+  top: 65px;
+  font-size: 12px;
+  left: 34px;
+}
+
+.form {
+  position: relative;
 }
