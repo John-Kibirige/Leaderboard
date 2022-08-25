@@ -8,14 +8,14 @@ const postData = async (data) => {
         Accept: 'application/json',
       },
       body: JSON.stringify(data),
-    }
+    },
   );
   return response.json();
 };
 
 const getData = async () => {
   let response = await fetch(
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/2CK77ljZH2u23q36Lc0c/scores/'
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/2CK77ljZH2u23q36Lc0c/scores/',
   );
   response = await response.json();
   return response;

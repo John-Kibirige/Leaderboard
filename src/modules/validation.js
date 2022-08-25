@@ -8,10 +8,9 @@ const createError = () => {
   return error;
 };
 
-const validInput = (nameInput, scoreInput) =>
-  nameInput.value.trim() !== '' &&
-  scoreInput.value.trim() !== '' &&
-  !isNaN(scoreInput.value);
+const validInput = (nameInput, scoreInput) => nameInput.value.trim() !== ''
+  && scoreInput.value.trim() !== ''
+  && !Number.isNaN(scoreInput.value);
 
 const handleValidation = (nameInput, scoreInput) => {
   const parent = nameInput.parentElement.parentElement.parentElement;
