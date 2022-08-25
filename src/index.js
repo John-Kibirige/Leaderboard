@@ -8,9 +8,16 @@ const name = document.querySelector('.form-name');
 const score = document.querySelector('.form-score');
 const refreshBtn = document.querySelector('.refresh');
 
+const handleClick = (e) => {
+  e.target.classList.add('active');
+  setTimeout(() => {
+    e.target.classList.remove('active');
+  }, 100);
+};
 const displayAllScores = document.querySelector('.display-all-scores');
 
-submitBtn.addEventListener('click', () => {
+submitBtn.addEventListener('click', (e) => {
+  handleClick(e);
   if (!validInput(name, score)) {
     handleValidation(name, score);
     return;
@@ -26,7 +33,8 @@ submitBtn.addEventListener('click', () => {
   });
 });
 
-refreshBtn.addEventListener('click', () => {
+refreshBtn.addEventListener('click', (e) => {
+  handleClick(e);
   getData().then((returned) => {
     const { result: scores } = returned;
     displayAllScores.innerHTML = '';
