@@ -2,7 +2,7 @@ import createMessage from './error.js';
 
 const validInput = (nameInput, scoreInput) => nameInput.value.trim() !== ''
   && scoreInput.value.trim() !== ''
-  && !Number.isNaN(scoreInput.value);
+  && !Number.isNaN(Number(scoreInput.value);
 
 const handleValidation = (nameInput, scoreInput) => {
   const parent = nameInput.parentElement.parentElement.parentElement;
